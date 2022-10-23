@@ -1,8 +1,8 @@
 import copy
 
-def Normal_DFS(maxtrix, start, end):
-    temp_maxtrix = copy.deepcopy(maxtrix)
-    parent_save = copy.deepcopy(maxtrix)
+def Normal_DFS(matrix, start, end):
+    temp_maxtrix = copy.deepcopy(matrix)
+    parent_save = copy.deepcopy(matrix)
     stack = [start]
     d = 0
     

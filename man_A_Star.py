@@ -101,26 +101,6 @@ import os
 import matplotlib.pyplot as plt
 
 
-with open('maze_map3.txt', 'w') as outfile:
-  outfile.write('0\n')
-  outfile.write('xxxxxxxxxxxxxxxxxxxxxx\n')
-  outfile.write('x  x    x            x\n')
-  outfile.write('x  x x      x x x    x\n')
-  outfile.write('x    x  x   x   x    x\n')
-  outfile.write('x    x  x   x   x    x\n')
-  outfile.write('xx x    x       x    x\n')
-  outfile.write('x       x   x   x    x\n')
-  outfile.write('x xxxx  x   x   x    x\n')
-  outfile.write('x  x x  xxxxx   x    x\n')
-  outfile.write('xx   xxxx       x  S x\n')
-  outfile.write('x  x        xxxxx    x\n')
-  outfile.write('x  x  x  xxxx   x    x\n')
-  outfile.write('x  x x  x       x    x\n')
-  outfile.write('xx    x   x xxx x    x\n')
-  outfile.write('x  x      x x   x    x\n')
-  outfile.write('   xxxxxxxxxx xxx    x\n')
-  outfile.write('x               x    x\n')
-  outfile.write('xxxxxxxxxxxxxxxxxxxxxx')
 
 def visualize_maze(matrix, bonus, start, end, route=None):
     """
@@ -198,7 +178,7 @@ def read_file(file_name: str = 'maze.txt'):
 
 
 
-bonus_points, matrix = read_file('maze_map3.txt')
+bonus_points, matrix = read_file('Normal_BFS.txt')
 
 print(f'The height of the matrix: {len(matrix)}')
 print(f'The width of the matrix: {len(matrix[0])}')
@@ -214,9 +194,6 @@ for i in range(len(matrix)):
                 
         else:
             pass
-
-visualize_maze(matrix,bonus_points,start,end)
-
 
 #Test
 h_matrix = heuristic_Matrix(matrix, end)

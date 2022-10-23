@@ -13,7 +13,7 @@ def pulp(matrix):
             else:
                 pass
     return (start, end)
-def read_file(file_name: str = 'StarNormal_BFS.txt'):
+def read_file(file_name):
   f=open(file_name,'r')
   n_bonus_points = int(next(f)[:-1])
   bonus_points = []

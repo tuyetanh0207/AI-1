@@ -1,5 +1,5 @@
-def export_map_Normal_BFS():
-    with open ("SNormal_BFS.txt","w+") as f:
+def export_map():
+    with open ("map01.txt","w+") as f:
         f.write("0\n")
         f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
         f.write("x      xx      xx      xx      xx  x\n")
@@ -17,9 +17,31 @@ def export_map_Normal_BFS():
         f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
         f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
         f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
-        f.write("xS xx      xx      xx      xx      x\n")
+        f.write("xS         xx      xx      xx      x\n")
         f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
+        f.close()
+    with open ("map02.txt","w+") as f:
+        f.write("0\n")
+        f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
+        f.write("x      xx      xx      xx       xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  x x  xx  x\n")
+        f.write("x  x  xx  xx  x        xx            \n")
+        f.write("x  xx  xx  xxxxxx  xx  xx  xx       x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx   xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx   xxxxxxxxx\n")
+        f.write("x  xx xx  xx  xx  x    xx           x\n")
+        f.write("x  xx  xxxxxxxxxxx  xx  xx  xx  xx  x\n")
+        f.write("x   xx  xx  xx  xx  xx  xx  xx  x   x\n")
+        f.write("x  xxxxxxxxxxxxxxx   xxxxxxxxx  xx  x\n")
+        f.write("x  xxxxxxxxxxxxxxxxx  xx  xx  x     x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx   x\n")
+        f.write("x   xx         xx  x                x\n")
+        f.write("x  xxxxxxxxxx  xx  xx  xx  xx  xxx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xxx  x\n")
+        f.write("xS xx      xx      xxxxxxxx xx  x   x\n")
+        f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
+        f.close()
 
 
 
-export_map_Normal_BFS()
+export_map()

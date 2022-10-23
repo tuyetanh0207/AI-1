@@ -1,10 +1,11 @@
 from read_file import read_file, pulp
 import matplotlib.pyplot as plt
-from GBFS import visualize_maze as vm
+import copy
+from drawmap import visualize_maze as vm
 
 
 
-str='Normal_BFS.txt'
+str='map02.txt'
 file=read_file(str)
 matrix=file[1]
 
@@ -16,42 +17,52 @@ def Normal_BFS(matrix):
     
     cols=len(matrix[0])
     rows = len (matrix)
-    print(cols, rows)
     #print("matrix", matrix[1][0])
-    visited = [[0 for i in range(cols)] for j in range(rows)]
-    #print(visited)
-    print('\n')
+    visited = copy.deepcopy(matrix)
+    parent = [[None for i in range(cols)] for j in range(rows)]
     route=[]
     cost=0
+    n_loop=0
     queue=[]
     start=pulp(matrix)[0]
     end=pulp(matrix)[1]
-    print("start",start, end)
-    print("start i", start[0])
     route.append(start)
     visited[start[0]][start[1]]=1
     queue.append(start)
     #print("visited", visited)
     while queue!=[]:
         s=queue.pop(0)
+        if s==end:
+            cost+=1
+            break
         print(s, end=" ")
         adj_vertex=[(s[0], s[1] + 1),(s[0], s[1] -1 ),(s[0]+1, s[1] ),(s[0] -1, s[1] )]
-        print("adj vertex:", adj_vertex)
+        flag=0
         for i in adj_vertex:
-            if i==end:
-                route.append(end)
-                queue=[]
-                cost+=1
-                break
-            if visited[i[0]][i[1]]==0 and matrix[i[0]][i[1]]==' ':    
+            if visited[i[0]][i[1]]==' ':    
                 queue.append(i)
-                visited[i[0]][i[1]]=1
-                route.append(i)
-                cost+=1
-    return start, end, route, cost
+                visited[i[0]][i[1]]='#'
+                parent[i[0]][i[1]]=s
+                n_loop+=1
+                flag=1
+                print("flag: ", flag)
+        
+
+    if s!=end:
+        print('Khong co duong di')
+        return None,None,None,None,
+    route=[end]
+    vertex=end
+    while vertex!=start:
+        route.insert(0, parent[vertex[0]][vertex[1]])
+        vertex=parent[vertex[0]][vertex[1]]
+    cost=len(route)
+    return start, end, route, cost, n_loop
 
 
 bonus=[]
-start, end, route=Normal_BFS(matrix)
-print (matrix[0][1] is 'x')
+start, end, route, cost, n_loop=Normal_BFS(matrix)
+Normal_BFS(matrix)
+print("cost: ", cost)
+print("nloop:", n_loop)
 vm(matrix, bonus, start, end, route)
