@@ -27,6 +27,7 @@ def Normal_DFS(maxtrix, start, end):
         with open ("dfs.txt","w+") as f:
             f.write("NO")
         return    
+    ## Truy hồi đường đi
     route = [end]
     point = end
     while point != start:
