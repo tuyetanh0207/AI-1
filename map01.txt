@@ -15,5 +15,5 @@ x  xx  xx  xx  xx  xx  xx  xx  xx
 x  xx  xx  xx  xx  xx  xx  xx  xx  x
 x  xx  xx  xx  xx  xx  xx  xx  xx  x
 x  xx  xx  xx  xx  xx  xx  xx  xx  x
-xS         xx      xx      xx      x
+xS xx       xx      xx         xx  x
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

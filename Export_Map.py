@@ -1,4 +1,5 @@
 def export_map():
+    # map không về đích được
     with open ("map01.txt","w+") as f:
         f.write("0\n")
         f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
@@ -17,9 +18,10 @@ def export_map():
         f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
         f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
         f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
-        f.write("xS         xx      xx      xx      x\n")
+        f.write("xS xx       xx      xx         xx  x\n")
         f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
         f.close()
+    # có nhiều vật cản
     with open ("map02.txt","w+") as f:
         f.write("0\n")
         f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
@@ -41,6 +43,71 @@ def export_map():
         f.write("xS xx      xx      xxxxxxxx xx  x   x\n")
         f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
         f.close()
+    #  đường đi bị chặn, dễ đánh lừa man heuristic
+    with open("map03.txt", "w+") as f:
+        f.write("0\n")
+        f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
+        f.write("x                                   x\n")
+        f.write("x                           xx      x\n")
+        f.write("x                           xx      x\n")                           
+        f.write("x                           xx      x\n")
+        f.write("x                           xx      x\n")
+        f.write("x                           xx      x\n")
+        f.write("x                           xx      x\n")
+        f.write("x                           xx      x\n")
+        f.write("x                           xx      x\n")
+        f.write("x                           xx      x\n")
+        f.write("x                           xx      x\n")
+        f.write("x                           xx      x\n")
+        f.write("x                           xx       \n")
+        f.write("xS                          xx      x\n")
+        f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
+        # có 2 đường đi, đường ngắn, đường, một đường nhanh hơn (bất lợi của DFS)
+    with open ("map04.txt","w+") as f:
+        f.write("0\n")
+        f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
+        f.write("x      xx      xx      xx      xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx   \n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("xS                                 x\n")
+        f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
+        f.close()
+    # map xoan oc
+    with open ("map05.txt","w+") as f:
+        f.write("0\n")
+        f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
+        f.write("x      xx      xx      xx      xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx   \n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("x  xx  xx  xx  xx  xx  xx  xx  xx  x\n")
+        f.write("xS                                 x\n")
+        f.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
+        f.close()
+
+
 
 
 
