@@ -21,14 +21,21 @@ def Normal_DFS(matrix, start, end):
             if (temp_maxtrix[i[0]][i[1]] != 'v' and maxtrix[i[0]][i[1]] != 'x'):
                 parent_save[i[0]][i[1]] = current
                 stack.append(i)
-        
+    if len(stack) == 0:
+        with open ("dfs.txt","w+") as f:
+            f.write("NO")
+        return    
     route = [end]
     point = end
     while point != start:
         route.insert(0, parent_save[point[0]][point[1]])
         point = parent_save[point[0]][point[1]]
 
-    return route, d
+    cost = len(route)
+    print('So vong lap DFS:', d)
+    with open ("dfs.txt","w+") as f:
+        f.write(cost)
+    return route
 
 
 
