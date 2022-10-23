@@ -5,12 +5,12 @@ from drawmap import visualize_maze as vm
 
 
 
-str='map01.txt'
+str='map02.txt'
 file=read_file(str)
 matrix=file[1]
 
 
-def Normal_BFS(matrix):
+def Normal_UCS(matrix):
     # This function find the route from start to end of matrix
     # return route, cost
     # algorithm uses the visited array to mark each point whether visited or not
@@ -35,6 +35,7 @@ def Normal_BFS(matrix):
         if s==end:
             cost+=1
             break
+        print(s, end=" ")
         adj_vertex=[(s[0], s[1] + 1),(s[0], s[1] -1 ),(s[0]+1, s[1] ),(s[0] -1, s[1] )]
         flag=0
         for i in adj_vertex:
@@ -44,23 +45,24 @@ def Normal_BFS(matrix):
                 parent[i[0]][i[1]]=s
                 n_loop+=1
                 flag=1
+                print("flag: ", flag)
         
 
     if s!=end:
         print('Khong co duong di')
-        return 0,None,None,None,None,None
+        return None,None,None,None,
     route=[end]
     vertex=end
     while vertex!=start:
         route.insert(0, parent[vertex[0]][vertex[1]])
         vertex=parent[vertex[0]][vertex[1]]
     cost=len(route)
-    return 1, start, end, route, cost, n_loop
+    return start, end, route, cost, n_loop
 
 
 bonus=[]
-check, start, end, route, cost, n_loop=Normal_BFS(matrix)
-Normal_BFS(matrix)
+start, end, route, cost, n_loop=Normal_UCS(matrix)
+Normal_UCS(matrix)
 print("cost: ", cost)
 print("nloop:", n_loop)
 vm(matrix, bonus, start, end, route)

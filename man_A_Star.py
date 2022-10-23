@@ -35,7 +35,7 @@ def DinhKe(x,y): #(x = m: dòng, y = n: cột)
     a.append((x,y+1))
     return a # a=[trên, dưới, trái phải]
 
-def ecl_A_Star(matrix, h_matrix, start, end):
+def man_A_Star(matrix, h_matrix, start, end):
     
     
     F = copy.deepcopy(matrix) #Ma trận danh sách liên kế, lưu vị trí của điểm trước khi đến nó

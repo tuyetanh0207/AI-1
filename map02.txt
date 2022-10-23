@@ -6,7 +6,7 @@ x  x  xx  xx  x        xx
 x  xx  xx  xxxxxx  xx  xx  xx       x
 x  xx  xx  xx  xx  xx  xx   xx  xx  x
 x  xx  xx  xx  xx  xx  xx   xxxxxxxxx
-x  xx xx  xx  xx  x    xx           x
+x  xx    xx  xx  x    xx           x
 x  xx  xxxxxxxxxxx  xx  xx  xx  xx  x
 x   xx  xx  xx  xx  xx  xx  xx  x   x
 x  xxxxxxxxxxxxxxx   xxxxxxxxx  xx  x

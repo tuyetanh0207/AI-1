@@ -28,8 +28,7 @@ def Normal_DFS(matrix, start, end):
         route.insert(0, parent_save[point[0]][point[1]])
         point = parent_save[point[0]][point[1]]
 
-    print('So vong lap DFS:', d)
-    return route
+    return route, d
 
 
 
